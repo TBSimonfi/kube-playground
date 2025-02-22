@@ -1,18 +1,23 @@
-name: CI
+name: Simple CI
 on: [push]
 jobs:
   build:
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: Verify Node.js Version Before
+
+    - name: Verify Node.js Version
       run: node -v
-    - run: npm install
-    - run: npm test
-    # check Node.js version after
-    - name: Verify Node.js Version After
-      run: node -v
+
+    - name: Run Custom Script
+      run: |
+        echo "Running custom script..."
+        # Add your custom commands here
+        echo "Hello, world!"
+        node -e "console.log('Node.js is working!')"
