@@ -5,8 +5,6 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
-    - name: Set PowerShell execution policy
-      run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
