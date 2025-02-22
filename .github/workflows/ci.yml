@@ -13,5 +13,6 @@ jobs:
       run: node -v
     - run: npm install
     - run: npm test
+    # check Node.js version after
     - name: Verify Node.js Version After
       run: node -v
