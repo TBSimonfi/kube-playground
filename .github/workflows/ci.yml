@@ -9,5 +9,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+    - name: Verify Node.js Version
+      run: node -v
     - run: npm install
     - run: npm test
