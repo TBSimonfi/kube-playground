@@ -1,7 +1,7 @@
 {
   "name": "kube-playground",
   "version": "1.0.0",
-  "type": "module",  // Add this line
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
