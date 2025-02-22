@@ -27,8 +27,10 @@ jobs:
         echo "    'semi': ['error', 'always']," >> eslint.config.mjs
         echo "    'quotes': ['error', 'double']," >> eslint.config.mjs
         echo "  }," >> eslint.config.mjs
-        echo "  parserOptions: {" >> eslint.config.mjs
-        echo "    ecmaVersion: 2020," >> eslint.config.mjs
+        echo "  languageOptions: {" >> eslint.config.mjs
+        echo "    parserOptions: {" >> eslint.config.mjs
+        echo "      ecmaVersion: 2020," >> eslint.config.mjs
+        echo "    }," >> eslint.config.mjs
         echo "  }," >> eslint.config.mjs
         echo "  env: {" >> eslint.config.mjs
         echo "    browser: true," >> eslint.config.mjs
