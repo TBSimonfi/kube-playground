@@ -18,6 +18,24 @@ jobs:
     - name: Install ESLint
       run: npm install eslint
 
+    - name: Create ESLint Config
+      run: |
+        echo "Creating ESLint config file..."
+        echo "export default [{" > eslint.config.js
+        echo "  files: ['*.js']," >> eslint.config.js
+        echo "  rules: {" >> eslint.config.js
+        echo "    'semi': ['error', 'always']," >> eslint.config.js
+        echo "    'quotes': ['error', 'double']," >> eslint.config.js
+        echo "  }," >> eslint.config.js
+        echo "  parserOptions: {" >> eslint.config.js
+        echo "    ecmaVersion: 2020," >> eslint.config.js
+        echo "  }," >> eslint.config.js
+        echo "  env: {" >> eslint.config.js
+        echo "    browser: true," >> eslint.config.js
+        echo "    node: true," >> eslint.config.js
+        echo "  }," >> eslint.config.js
+        echo "}];" >> eslint.config.js
+
     - name: Run ESLint
       run: npx eslint .
 
